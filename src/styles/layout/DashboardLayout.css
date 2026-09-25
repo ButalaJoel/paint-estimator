@@ -1,0 +1,60 @@
+.dashboard-layout {
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+
+  background: #f7f9f9;
+}
+
+.dashboard-main {
+  min-width: 0;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-content {
+  flex: 1;
+
+  padding: 34px;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+  .dashboard-layout {
+    grid-template-columns: 220px minmax(0, 1fr);
+  }
+
+  .dashboard-content {
+    padding: 26px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
+  .dashboard-layout {
+    display: block;
+
+    min-height: 100vh;
+  }
+
+  .dashboard-main {
+    min-height: 100vh;
+  }
+
+  .dashboard-content {
+    padding: 24px 16px;
+  }
+}

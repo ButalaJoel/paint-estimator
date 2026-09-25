@@ -1,0 +1,188 @@
+.app-header {
+  min-height: 72px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 32px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e4e9e9;
+
+  position: relative;
+
+  z-index: 20;
+}
+
+
+/* =========================================
+   SEARCH
+   ========================================= */
+
+.header-search {
+  position: relative;
+
+  width: 530px;
+
+  transition:
+    width 0.25s ease,
+    transform 0.25s ease;
+}
+
+.header-search svg {
+  position: absolute;
+
+  left: 18px;
+  top: 50%;
+
+  width: 18px;
+  height: 18px;
+
+  transform: translateY(-50%);
+
+  color: #7d8989;
+
+  pointer-events: none;
+
+  transition: color 0.2s ease;
+}
+
+.header-search input {
+  width: 100%;
+  height: 46px;
+
+  padding: 0 20px 0 48px;
+
+  border: 1px solid #dce3e3;
+
+  /*
+   * BIG pill radius
+   */
+  border-radius: 999px;
+
+  background: #f8fafa;
+
+  color: #111111;
+
+  outline: none;
+
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease,
+    width 0.25s ease;
+}
+
+.header-search input::placeholder {
+  color: #899494;
+}
+
+
+/* Hover */
+
+.header-search:hover input {
+  border-color: #c5d1d1;
+}
+
+
+/* Focus */
+
+.header-search:focus-within {
+  width: 580px;
+}
+
+.header-search:focus-within input {
+  background: #ffffff;
+
+  border-color: #1ea4a8;
+
+  box-shadow:
+    0 8px 28px rgba(30, 164, 168, 0.12),
+    0 0 0 4px rgba(30, 164, 168, 0.08);
+}
+
+.header-search:focus-within svg {
+  color: #1ea4a8;
+}
+
+
+/* =========================================
+   MOBILE MENU BUTTON
+   ========================================= */
+
+.mobile-menu-button {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 12px;
+
+  background: transparent;
+
+  color: #111111;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.mobile-menu-button svg {
+  width: 22px;
+  height: 22px;
+}
+
+.mobile-menu-button:hover {
+  background: rgba(30, 164, 168, 0.1);
+  color: #1ea4a8;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  .app-header {
+    min-height: 64px;
+
+    gap: 12px;
+
+    padding: 0 16px;
+  }
+
+  .mobile-menu-button {
+    display: flex;
+
+    flex-shrink: 0;
+  }
+
+  .header-search {
+    width: 100%;
+  }
+
+  .header-search:focus-within {
+    width: 100%;
+  }
+
+  .header-search input {
+    height: 44px;
+
+    border-radius: 999px;
+
+    padding-left: 46px;
+  }
+}

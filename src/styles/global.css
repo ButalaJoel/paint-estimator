@@ -1,0 +1,147 @@
+:root {
+  /* ================================
+     PEACOCK COATING ASSISTANT
+     DESIGN TOKENS
+  ================================= */
+
+  /* Brand */
+  --color-primary: #168f87;
+  --color-primary-dark: #117a73;
+  --color-primary-light: #e9f6f5;
+
+  /* Base */
+  --color-white: #ffffff;
+  --color-black: #111111;
+
+  /* Text */
+  --color-text: #111111;
+  --color-text-secondary: #666666;
+  --color-muted: #777777;
+
+  /* Borders */
+  --color-border: #e5e5e5;
+  --color-border-light: #eeeeee;
+
+  /* Backgrounds */
+  --color-background: #ffffff;
+  --color-surface: #f8f9f9;
+
+  /* Typography */
+  --font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  /* Layout */
+  --sidebar-width: 250px;
+  --header-height: 72px;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
+
+
+/* ================================
+   RESET
+================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background: var(--color-background);
+  color: var(--color-text);
+
+  font-family: var(--font-family);
+  font-size: 14px;
+  line-height: 1.5;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button,
+input,
+select,
+textarea {
+  outline: none;
+}
+
+
+/* ================================
+   LINKS
+================================ */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* ================================
+   IMAGES
+================================ */
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* ================================
+   SELECTION
+================================ */
+
+::selection {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+
+/* ================================
+   SCROLLBAR
+================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
